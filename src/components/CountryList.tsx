@@ -19,10 +19,10 @@ const CountryList = ({ isDone }: { isDone: boolean }) => {
       setFavoriteCountries(
         favoriteCountries.filter((toggle) => toggle.cca3 !== country.cca3)
       );
-      setCountries([...countries, country]);
+      setCountries([country, ...countries]);
     } else {
       setCountries(countries.filter((toggle) => toggle.cca3 !== country.cca3));
-      setFavoriteCountries([...favoriteCountries, country]);
+      setFavoriteCountries([country, ...favoriteCountries]);
     }
   };
 
