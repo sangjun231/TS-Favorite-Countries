@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Country } from "../types/Country";
+import { Country } from "../types/country";
 
 export const countryApi = axios.create({
   baseURL: "https://restcountries.com/v3.1",

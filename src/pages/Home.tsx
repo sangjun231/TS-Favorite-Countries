@@ -5,11 +5,12 @@ const Home = () => {
     <>
       <h1 className="flex justify-center items-center mt-8 mb-8 text-2xl font-bold">
         Favorite Countries
+        <CountryList isDone={true} />
       </h1>
       <h1 className="flex justify-center items-center mb-8 text-3xl font-bold">
         Countries
       </h1>
-      <CountryList />
+      <CountryList isDone={false} />
     </>
   );
 };
