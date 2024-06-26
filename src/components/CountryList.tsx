@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
-import { getCountries } from "../api/CountryAPI";
+import { getCountries } from "../api/countryAPI";
 import CountryCard from "./CountryCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Country } from "../types/country";
+import useCountryStore from "../zustand/countryStore";
 
 const CountryList = ({ isDone }: { isDone: boolean }) => {
-  const [favoriteCountries, setFavoriteCountries] = useState<Country[]>([]);
-  const [countries, setCountries] = useState<Country[]>([]);
+  const { countries, setCountries, favoriteCountries, setFavoriteCountries } =
+    useCountryStore();
 
   const { data, error, isLoading } = useQuery({
     queryKey: ["countries"],
