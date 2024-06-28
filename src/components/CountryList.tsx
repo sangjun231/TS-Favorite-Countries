@@ -30,7 +30,7 @@ const CountryList = ({ isDone }: { isDone: boolean }) => {
     if (data) {
       setCountries(data);
     }
-  }, [data]);
+  }, [data, setCountries]);
 
   if (isLoading) {
     return (
